@@ -20,7 +20,7 @@ Wireshark
 
 ## Interface
 
-![](/Users/i565316/Documents/courses/wireshark-playground/imgs/wireshark-interface.png)
+![](imgs/wireshark-interface.png)
 
 ### Filters
 
@@ -36,7 +36,7 @@ match (regex) # http.host matches "\.(org|com|br)"
 
 #### Statistics
 
-![Statistics](/Users/i565316/Documents/courses/wireshark-playground/imgs/statistics.png)
+![Statistics](imgs/statistics.png)
 
 
 
