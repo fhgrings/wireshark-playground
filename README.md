@@ -45,11 +45,8 @@ match (regex) # http.host matches "\.(org|com|br)"
 #### TCP Options to take a look
 
 * TTL (Time to Live) - Router passed throw;
-
 * Window Size
-
 * Delta Time (Time between last packages sent/received)
-
 * TCP Options
 
   * Acknowledment
@@ -57,5 +54,35 @@ match (regex) # http.host matches "\.(org|com|br)"
   * Reset
   * Syn
 
-  
+
+### TLS Decrypted
+
+To read TLS messages we need to have the Keys changed between client and server. 
+
+To do that we have two ways:
+
+##### Linux + Mac
+
+Add SSLKEYLOGFILE variable to environment
+
+```bash
+echo 'export SSLKEYLOGFILE=/tmp/sslkeylogfile.log' >> ~/.bash_profile
+```
+
+#### Java Apps
+
+Add Java Agent to application running to store all SSL keys in file
+
+https://github.com/neykov/extract-tls-secrets
+
+```bash
+java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar list
+java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar <pid> /tmp/secrets.log
+```
+
+
+
+##### Results
+
+![tls_decrypted](imgs/tls_decrypted.png)
 
