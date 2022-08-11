@@ -81,6 +81,10 @@ java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar <pid> /tmp/secrets.log
 ```
 
 
+##### Upload TLS secrets on wireshark in:
+
+Preferences > Protocols > TLS > (Pre)-Master-Secret Log Filename 
+
 
 ##### Results
 
