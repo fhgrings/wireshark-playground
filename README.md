@@ -18,6 +18,12 @@ Wireshark
 
 
 
+## Commands
+```bash
+tcpdump -i eth0 -s 65535 -w /tmp/tcp_dump.pcap
+```
+
+
 ## Interface
 
 ![](imgs/wireshark-interface.png)
