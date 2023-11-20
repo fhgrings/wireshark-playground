@@ -92,7 +92,7 @@ Add Java Agent to application running to store all SSL keys in file
 
 https://github.com/neykov/extract-tls-secrets
 
-### Install Java JDK
+#### Install Java JDK
 
 ```bash
 wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
@@ -100,6 +100,11 @@ wget https://repo1.maven.org/maven2/name/neykov/extract-tls-secrets/4.0.0/extrac
 tar -xzvf jdk-17_linux-x64_bin.tar.gz
 ln -s jdk-17.0.9/bin/java .
 echo JAVA_HOME=$(pwd)/jdk-17.0.9/bin >> ~/.bash_profile
+```
+
+#### Run extract-tls-secrets .jar
+
+```bash
 java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar list
 java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar <pid> /tmp/secrets.log
 ```
