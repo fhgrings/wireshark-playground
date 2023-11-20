@@ -51,14 +51,6 @@ match (regex) # http.host matches "\.(org|com|br)"
 
 ### Tips & Tricks
 
-### Install Java JDK
-
-```bash
-wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
-tar -xzvf jdk-17_linux-x64_bin.tar.gz
-echo JAVA_HOME=$(pwd)/jdk-17.0.9/bin >> ~/.bash_profile  
-```
-
 #### TCP Options to take a look
 
 * TTL (Time to Live) - Router passed throw;
@@ -100,11 +92,17 @@ Add Java Agent to application running to store all SSL keys in file
 
 https://github.com/neykov/extract-tls-secrets
 
+### Install Java JDK
+
 ```bash
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
+wget https://repo1.maven.org/maven2/name/neykov/extract-tls-secrets/4.0.0/extract-tls-secrets-4.0.0.jar
+tar -xzvf jdk-17_linux-x64_bin.tar.gz
+ln -s jdk-17.0.9/bin/java .
+echo JAVA_HOME=$(pwd)/jdk-17.0.9/bin >> ~/.bash_profile
 java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar list
 java -jar ~/Downloads/extract-tls-secrets-4.0.0.jar <pid> /tmp/secrets.log
 ```
-
 
 ##### Upload TLS secrets on wireshark in:
 
