@@ -51,6 +51,14 @@ match (regex) # http.host matches "\.(org|com|br)"
 
 ### Tips & Tricks
 
+### Install Java JDK
+
+```bash
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
+tar -xzvf jdk-17_linux-x64_bin.tar.gz
+echo JAVA_HOME=$(pwd)/jdk-17.0.9/bin >> ~/.bash_profile  
+```
+
 #### TCP Options to take a look
 
 * TTL (Time to Live) - Router passed throw;
