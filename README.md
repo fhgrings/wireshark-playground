@@ -63,6 +63,14 @@ match (regex) # http.host matches "\.(org|com|br)"
   * Reset
   * Syn
 
+### Multi Remote Hosts TCP Dump + WireShark Analysis
+```bash
+mkfifo /tmp/pcap
+wireshark -k -i /tmp/pcap
+
+ssh user@host1 "tcpdump -s 0 -U -n  -w -" > /tmp/pcap
+ssh user@host2 "tcpdump -s 0 -U -n  -w -" > /tmp/pcap
+```
 
 ### TLS Decrypted
 
